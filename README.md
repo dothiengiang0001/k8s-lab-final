@@ -14,17 +14,19 @@ kubectl apply -f web2/web2-service.yaml
 
 - Các lệnh chạy trên k3s tại 1 node tên là "workernode":
 
-sudo kubectl apply -f nginx-proxy/nginx-proxy-deployment.yaml --node=workernode ; \
+sudo k3s kubectl apply -f nginx-proxy/nginx-proxy-deployment.yaml --node=workernode ; \
 
-sudo kubectl apply -f nginx-proxy/nginx-proxy-service.yaml --node=workernode ; \
+sudo k3s kubectl apply -f nginx-proxy/nginx-proxy-service.yaml --node=workernode ; \
 
-sudo kubectl apply -f web1/web1-deployment.yaml --node=workernode ; \
+sudo k3s kubectl apply -f web1/web1-deployment.yaml --node=workernode ; \
 
-sudo kubectl apply -f web1/web1-service.yaml --node=workernode ; \
+sudo k3s kubectl apply -f web1/web1-deployment.yaml --node=workernode ; \
 
-sudo kubectl apply -f web2/web2-deployment.yaml --node=workernode ; \
+sudo k3s  kubectl apply -f web1/web1-service.yaml --node=workernode ; \
 
-sudo kubectl apply -f web2/web2-service.yaml --node=workernode
+sudo k3s kubectl apply -f web2/web2-deployment.yaml --node=workernode ; \
+
+sudo k3s kubectl apply -f web2/web2-service.yaml --node=workernode
 
 - Chọn worker node cụ thể khi triển khai tài nguyên:
 
