@@ -1,4 +1,4 @@
-- Cách lệnh chạy
+- Cách lệnh chạy:
 kubectl apply -f nginx-proxy/nginx-proxy-deployment.yaml
 kubectl apply -f nginx-proxy/nginx-proxy-service.yaml
 
