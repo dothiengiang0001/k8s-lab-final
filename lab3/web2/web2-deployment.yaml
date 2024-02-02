@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web2-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web2
+  template:
+    metadata:
+      labels:
+        app: web2
+    spec:
+      containers:
+      - name: web2-container
+        image: dothiengiang0001/web2:latest
+        ports:
+        - containerPort: 80  # Chỉ định cổng container 80

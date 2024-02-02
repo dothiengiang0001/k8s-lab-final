@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web1-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web1
+  template:
+    metadata:
+      labels:
+        app: web1
+    spec:
+      containers:
+      - name: web1-container
+        image: dothiengiang0001/web1:latest
+        ports:
+        - containerPort: 80  # Chỉ định cổng container 80

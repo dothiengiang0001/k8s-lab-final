@@ -1,0 +1,25 @@
+# ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+spec:
+  rules:
+  - host: demo.com.vn
+    http:
+      paths:
+      - path: /web1
+        pathType: Prefix
+        backend:
+          service:
+            name: web1-service
+            port:
+              number: 80
+      - path: /web2
+        pathType: Prefix
+        backend:
+          service:
+            name: web2-service
+            port:
+              number: 80
+
