@@ -1,14 +1,14 @@
 - Cách lệnh chạy:
 
-kubectl apply -f nginx-proxy/nginx-proxy-deployment.yaml
+kubectl apply -f nginx-proxy/nginx-proxy-deployment.yaml ; \
 
-kubectl apply -f nginx-proxy/nginx-proxy-service.yaml
+kubectl apply -f nginx-proxy/nginx-proxy-service.yaml ; \
 
-kubectl apply -f web1/web1-deployment.yaml
+kubectl apply -f web1/web1-deployment.yaml ; \
 
-kubectl apply -f web1/web1-service.yaml
+kubectl apply -f web1/web1-service.yaml ; \
 
-kubectl apply -f web2/web2-deployment.yaml
+kubectl apply -f web2/web2-deployment.yaml ; \
 
 kubectl apply -f web2/web2-service.yaml
 
