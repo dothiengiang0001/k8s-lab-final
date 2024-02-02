@@ -1,4 +1,4 @@
-- Cách lệnh chạy:
+- Các lệnh chạy:
 
 kubectl apply -f nginx-proxy/nginx-proxy-deployment.yaml ; \
 
@@ -11,6 +11,20 @@ kubectl apply -f web1/web1-service.yaml ; \
 kubectl apply -f web2/web2-deployment.yaml ; \
 
 kubectl apply -f web2/web2-service.yaml
+
+- Các lệnh chạy trên k3s:
+
+k3s kubectl apply -f nginx-proxy/nginx-proxy-deployment.yaml ; \
+
+k3s kubectl apply -f nginx-proxy/nginx-proxy-service.yaml ; \
+
+k3s kubectl apply -f web1/web1-deployment.yaml ; \
+
+k3s kubectl apply -f web1/web1-service.yaml ; \
+
+k3s kubectl apply -f web2/web2-deployment.yaml ; \
+
+k3s kubectl apply -f web2/web2-service.yaml
 
 - Chọn worker node cụ thể khi triển khai tài nguyên:
 
