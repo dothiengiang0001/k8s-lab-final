@@ -35,3 +35,8 @@ kubectl apply -f <your-resource-file.yaml> --node="node-name"
 - Chọn worker node dựa trên các điều kiện hoặc labels:
 
 kubectl apply -f <your-resource-file.yaml> --selector="label-key"="label-value"
+
+- Các lệnh thường dùng:
+- 
+kubectl get pods,service,node -o wide
+
